@@ -109,8 +109,44 @@ div ul li {
     list-style: lower-alpha;
 }
 
+.supp {
+    position: relative;
+    display: inline-block;
+}
+
+.supp > img {
+    position: absolute;
+}
+
+#supplement ~ img {
+    transform: scaleY(0);
+    transition: transform 0.5s;
+}
+
+#supplement:checked ~ img {
+    transform: scaleY(1);
+}
+
+.court {
+    position: relative;
+    display: inline-block;
+}
+
+.court > img {
+    position: absolute;
+}
+
+#courtesy ~ img {
+    transform: scaleY(0);
+    transition: transform 0.5s;
+}
+
+#courtesy:checked ~ img {
+    transform: scaleY(1);
+}
+
 img {
-    max-width: 250px;
+    max-width: 500px;
     display: block;
     margin: 0 auto;
 }
