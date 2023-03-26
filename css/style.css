@@ -81,6 +81,9 @@ nav a {
     padding: 20px;
     text-decoration: none;
     display: block;
+    transition-property:background-color;
+    transition-duration: 0.8s;
+    transition-timing-function: linear;
 }
 
 nav a.thisPage {
@@ -90,8 +93,7 @@ nav a.thisPage {
 }
 
 nav a:hover {
-    background-color: #1b3327;
-    color: #e3eed7;
+    background-color: #0b2e07;
 }
 
 
