@@ -28,7 +28,7 @@ body {
     color: #000000;
     font-family: 'Times New Roman', Times, serif;
     display: grid;
-    grid-template-columns: 20% minmax(auto, 150px) auto 20%;
+    grid-template-columns: 15% minmax(auto, 150px) auto 15%;
     grid-template-rows: minmax(150px, 400px) 60px auto min-content;
     grid-template-areas:
         ".  cover  cover    ."
@@ -103,9 +103,24 @@ nav a:hover {
     padding: 10px;
 }
 
+div ul li {
+    list-style: lower-alpha;
+}
+
+img {
+    max-width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+    text-align: center;
+}
+
 .footer {
     grid-area: footer;
     background-color: #333333;
+    color: #e3eed7;
     text-align: center;
-    
+
 }
