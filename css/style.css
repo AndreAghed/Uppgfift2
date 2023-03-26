@@ -1,0 +1,111 @@
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+
+}
+
+html,
+body,
+nav,
+header,
+main,
+aside,
+footer,
+article,
+section,
+div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #769672;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    display: grid;
+    grid-template-columns: 20% minmax(auto, 150px) auto 20%;
+    grid-template-rows: minmax(150px, 400px) 60px auto min-content;
+    grid-template-areas:
+        ".  cover  cover    ."
+        ".      header main     ."
+        ".      nav    main     ."
+        "footer footer footer footer";
+}
+
+.image {
+    grid-area: cover;
+    background-image: url(../images/forest.jpg);
+    align-items: center;
+    background-size: cover;
+    background-position: bottom;
+    padding: 10px;
+    color: #00000000;
+}
+
+
+header {
+    grid-area: header;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px;
+    margin: 0;
+}
+
+header h1 {
+    margin: 0px;
+    text-align: left;
+}
+
+nav {
+    grid-area: nav;
+
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+nav a {
+    color: #000000;
+    background-color: #0e521c55;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+nav a.thisPage {
+    background-color: #225518;
+    color: #ffffff;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #1b3327;
+    color: #e3eed7;
+}
+
+
+
+#main {
+    grid-area: main;
+    background-color: #9dbe99;
+    color: #000000;
+    padding: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333333;
+    text-align: center;
+    
+}
