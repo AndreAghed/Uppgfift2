@@ -173,7 +173,7 @@ p {
 @media screen and (max-width: 800px) {
     body {
         grid-template-columns: auto;
-        grid-template-rows: minmax(200, auto) min-content min-content auto min-content;
+        grid-template-rows: minmax(200px, auto) min-content min-content auto min-content;
         grid-template-areas:
             "cover"
             "header"
