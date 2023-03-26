@@ -81,7 +81,7 @@ nav a {
     padding: 20px;
     text-decoration: none;
     display: block;
-    transition-property:background-color;
+    transition-property: background-color;
     transition-duration: 0.8s;
     transition-timing-function: linear;
 }
@@ -114,16 +114,16 @@ div ul li {
     display: inline-block;
 }
 
-.supp > img {
+.supp>img {
     position: absolute;
 }
 
-#supplement ~ img {
+#supplement~img {
     transform: scaleY(0);
     transition: transform 0.5s;
 }
 
-#supplement:checked ~ img {
+#supplement:checked~img {
     transform: scaleY(1);
 }
 
@@ -132,16 +132,16 @@ div ul li {
     display: inline-block;
 }
 
-.court > img {
+.court>img {
     position: absolute;
 }
 
-#courtesy ~ img {
+#courtesy~img {
     transform: scaleY(0);
     transition: transform 0.5s;
 }
 
-#courtesy:checked ~ img {
+#courtesy:checked~img {
     transform: scaleY(1);
 }
 
@@ -161,4 +161,55 @@ p {
     color: #e3eed7;
     text-align: center;
 
+}
+
+#listed,
+#listbox {
+    display: none;
+}
+
+/* ----- Media queries ----- */
+
+@media screen and (max-width: 800px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: minmax(200, auto) min-content min-content auto min-content;
+        grid-template-areas:
+            "cover"
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    .image {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #listed {
+        background-image: url(../images/meny.png);
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    #listbox~ul {
+        display: none;
+    }
+
+    #listbox:checked~ul {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
 }
